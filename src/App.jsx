@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
+import {actions} from './store/index'
 
 const App = () => {
 
@@ -7,16 +8,16 @@ const App = () => {
   const dispatch = useDispatch();
 
   const increase = () => {
-    dispatch({type: 'INC'})
+    dispatch(actions.increase())
   }
 
   const decrease = () => {
-    dispatch({type: 'DEC'})
+    dispatch(actions.decrease())
     
   }
   
   const add = () => {
-    dispatch({ type: 'ADD',payload: 100})
+    dispatch(actions.add())
   }
 
   return (
